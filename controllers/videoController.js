@@ -4,16 +4,20 @@ export const home = (req, res) =>
 
 export const search = (req, res) => {
   const {
-    query: { keyword: keyword }
+    query: { keyword }
   } = req;
-  res.render("search", { pageTitle: "Search", keyword });
+  res.render("search", { pageTitle: "Search", keyword, videos });
 };
 
 export const upload = (req, res) =>
   res.render("upload", { pageTitle: "Upload" });
 
-export const videoDetail = (req, res) =>
+export const videoDetail = (req, res) => {
+  const {
+    params: { id }
+  } = req;
   res.render("videoDetail", { pageTitle: "Video Detail" });
+};
 
 export const editVideo = (req, res) =>
   res.render("editVideo", { pageTitle: "Edit Video" });
