@@ -18,6 +18,7 @@ const VideoSchema = new mongoose.Schema({
     type: Date,
     default: Date.now
   },
+  //   Comment ID 를 배열로 저장하는 방법
   comments: [
     {
       type: mongoose.Schema.Types.ObjectId,
