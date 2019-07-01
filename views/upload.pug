@@ -3,7 +3,7 @@ extends layouts/main
 block content
 	.form-container
 		form(action=`${routes.videos}${routes.upload}`, method="post")
-			label(for="file") Avatar
+			label(for="file") Video File
 			input(type="file", id="video", name="video", required=true)
 			input(type="text", name="title", placeholder="Title", required=true)
 			textarea(name="description", placeholder="Description", required=true)
