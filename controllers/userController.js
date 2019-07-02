@@ -4,7 +4,12 @@ export const getJoin = (req, res) => res.render("join", { pageTitle: "Join" });
 
 export const postJoin = (req, res) => {
   const {
-    body: { name, email, password, password2 }
+    body: {
+      // name,
+      // email,
+      password,
+      password2
+    }
   } = req;
   if (password !== password2) {
     res.status(400);
@@ -28,9 +33,6 @@ export const logout = (req, res) => {
 };
 
 export const userDeatil = (req, res) => {
-  const {
-    params: { id }
-  } = req;
   res.render("userDetail", { pageTitle: "User Detail" });
 };
 export const editProfile = (req, res) =>

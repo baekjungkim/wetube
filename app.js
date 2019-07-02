@@ -25,10 +25,10 @@ app.use(routes.home, globalRouter);
 app.use(routes.users, userRouter);
 app.use(routes.videos, videoRouter);
 
-app.use((req, res, next) => {
+app.use((req, res) => {
   res.status(400).send("일치하는 주소가 없습니다!");
 });
-app.use((error, req, res, next) => {
+app.use((err, req, res) => {
   console.error(err.stack);
   res.status(500).redirect(routes.home);
 });
