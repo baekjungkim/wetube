@@ -15,7 +15,13 @@ export const search = async (req, res) => {
   const {
     query: { keyword }
   } = req;
-  res.render("search", { pageTitle: "Search", keyword });
+  let videos = [];
+  try {
+    // videos = await Video.find({ title: { $regex: keyword, $options: "i" } });
+  } catch (error) {
+    console.log(error);
+  }
+  res.render("search", { pageTitle: "Search", keyword, videos });
 };
 
 export const getUpload = (req, res) =>
