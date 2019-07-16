@@ -235,7 +235,7 @@ button.delete {
             align-items: center; }
     .header .header__wrapper .header__column i {
       color: white;
-      font-size: 40px; }
+      font-size: 30px; }
     .header .header__wrapper .header__column:nth-child(2) {
       width: 100%;
       justify-self: center; }
@@ -262,25 +262,26 @@ button.delete {
                 border-radius: 5px;
         font-size: 14px;
         color: #444444;
-        font-weight: 600; }
+        font-weight: 600;
+        max-width: none; }
         .header .header__wrapper .header__column form input::-webkit-input-placeholder {
           font-weight: 300;
-          color: rgba(0, 0, 0, 0.5); }
+          color: rgba(0, 0, 0, 0.7); }
         .header .header__wrapper .header__column form input:-moz-placeholder {
           font-weight: 300;
-          color: rgba(0, 0, 0, 0.5); }
+          color: rgba(0, 0, 0, 0.7); }
         .header .header__wrapper .header__column form input::-moz-placeholder {
           font-weight: 300;
-          color: rgba(0, 0, 0, 0.5); }
+          color: rgba(0, 0, 0, 0.7); }
         .header .header__wrapper .header__column form input:-ms-input-placeholder {
           font-weight: 300;
-          color: rgba(0, 0, 0, 0.5); }
+          color: rgba(0, 0, 0, 0.7); }
         .header .header__wrapper .header__column form input::-ms-input-placeholder {
           font-weight: 300;
-          color: rgba(0, 0, 0, 0.5); }
+          color: rgba(0, 0, 0, 0.7); }
         .header .header__wrapper .header__column form input::placeholder {
           font-weight: 300;
-          color: rgba(0, 0, 0, 0.5); }
+          color: rgba(0, 0, 0, 0.7); }
 
 .footer {
   padding-top: 50px;
@@ -362,7 +363,9 @@ button.delete {
   .form-container .fileUpload label {
     font-weight: 320;
     margin-right: 10px;
-    color: rgba(0, 0, 0, 0.5); }
+    color: rgba(0, 0, 0, 0.5);
+    clear: both;
+    float: left; }
 
 .social-login {
   display: -webkit-box;
