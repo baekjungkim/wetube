@@ -63,16 +63,92 @@ export const postGithubLogIn = (req, res) => {
   res.redirect(routes.home);
 };
 
+export const facebookLogin = passport.authenticate("facebook");
+
+export const facebookLoginCallback = async (_, __, profile, cb) => {
+  const {
+    _json: { id, name, email }
+  } = profile;
+
+  try {
+    const user = await User.findOne({ email });
+    if (user) {
+      user.facebookId = id;
+      user.save();
+      return cb(null, user);
+    }
+    const newUser = await User.create({
+      email,
+      name,
+      facebookId: id,
+      avatarUrl: `https://graph.facebook.com/${id}/picture?type=large`
+    });
+    return cb(null, newUser);
+  } catch (error) {
+    return cb(error);
+  }
+};
+
+export const postFacebookLogin = (req, res) => {
+  res.redirect(routes.home);
+};
+
+export const kakaoLogin = passport.authenticate("kakao");
+
+export const kakaoLoginCallback = async (_, __, profile, done) => {
+  const {
+    _json: {
+      id,
+      kaccount_email: email,
+      properties: { profile_image: avatarUrl, nickname: name }
+    }
+  } = profile;
+
+  console.log(profile);
+
+  try {
+    const user = await User.findOne({ email });
+    if (user) {
+      user.kakaoId = id;
+      user.save();
+      return done(null, user);
+    }
+    const newUser = await User.create({
+      email,
+      name,
+      kakaoId: id,
+      avatarUrl
+    });
+    return done(null, newUser);
+  } catch (error) {
+    return done(error);
+  }
+};
+
+export const postKakaoLogin = (req, res) => {
+  console.log("postLogin");
+  res.redirect(routes.home);
+};
+
 export const logout = (req, res) => {
   req.logout();
   res.redirect(routes.home);
 };
 
-export const userDeatil = (req, res) =>
-  res.render("userDetail", { pageTitle: "User Detail" });
-
 export const getMe = (req, res) => {
   res.render("userDetail", { pageTitle: "User Detail", user: req.user });
+};
+
+export const userDeatil = async (req, res) => {
+  const {
+    params: { id }
+  } = req;
+  try {
+    const user = await User.findById(id);
+    res.render("userDetail", { pageTitle: "User Detail", user });
+  } catch (error) {
+    res.redirect(routes.home);
+  }
 };
 
 export const editProfile = (req, res) =>

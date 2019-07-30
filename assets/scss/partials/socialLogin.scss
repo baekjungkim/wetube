@@ -1,6 +1,6 @@
 .social-login {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   width: 23%;
   button {
@@ -11,6 +11,7 @@
     align-items: center;
     &:not(:last-child) {
       margin-right: 15px;
+      margin-bottom: 15px;
     }
     span {
       margin-right: 10px;
@@ -24,5 +25,9 @@
   .social-login--facebook {
     background-color: #3c5a99;
     color: white;
+  }
+  .social-login--kakaotalk {
+    background-color: #f7e319;
+    color: black;
   }
 }
