@@ -1,8 +1,8 @@
 .social-login {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 23%;
+  align-items: center;
+  width: 100%;
   button {
     width: 100%;
     max-width: 320px;
@@ -10,24 +10,19 @@
     justify-content: center;
     align-items: center;
     &:not(:last-child) {
-      margin-right: 15px;
       margin-bottom: 15px;
     }
     span {
       margin-right: 10px;
-      font-size: 15px;
+      font-size: 20px;
     }
   }
   .social-login--github {
-    background-color: #6cc644;
+    background-color: $black;
     color: white;
   }
   .social-login--facebook {
-    background-color: #3c5a99;
+    background-color: #3a5998;
     color: white;
-  }
-  .social-login--kakaotalk {
-    background-color: #f7e319;
-    color: black;
   }
 }

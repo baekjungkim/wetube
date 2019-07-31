@@ -4,11 +4,11 @@
   align-items: center;
   .video__info {
     width: 100%;
-    max-width: 750px;
+    max-width: 850px;
     margin-top: 25px;
     button {
       width: 100px;
-      margin-bottom: 15px;
+      margin-bottom: 25px;
     }
     .video__title,
     .video__views,
@@ -30,15 +30,7 @@
   .video__comments {
     margin-top: 25px;
     .video__comment-number {
-      font-size: 16px;
-    }
-  }
-
-  .video__player {
-    width: 100%;
-    max-width: 750px;
-    video {
-      width: 100%;
+      font-size: 18px;
     }
   }
 }

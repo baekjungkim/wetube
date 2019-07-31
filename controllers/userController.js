@@ -104,8 +104,6 @@ export const kakaoLoginCallback = async (_, __, profile, done) => {
     }
   } = profile;
 
-  console.log(profile);
-
   try {
     const user = await User.findOne({ email });
     if (user) {
@@ -126,7 +124,6 @@ export const kakaoLoginCallback = async (_, __, profile, done) => {
 };
 
 export const postKakaoLogin = (req, res) => {
-  console.log("postLogin");
   res.redirect(routes.home);
 };
 
@@ -151,7 +148,7 @@ export const userDeatil = async (req, res) => {
   }
 };
 
-export const editProfile = (req, res) =>
+export const getEditProfile = (req, res) =>
   res.render("editProfile", { pageTitle: "Edit Profile" });
-export const changePassword = (req, res) =>
+export const getChangePassword = (req, res) =>
   res.render("changePassword", { pageTitle: "Change Password" });

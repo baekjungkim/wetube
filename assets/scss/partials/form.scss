@@ -6,7 +6,7 @@
   form {
     width: 100%;
     max-width: 320px;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
     input:not([type="file"]),
     .fileUpload {
       display: block;
@@ -25,20 +25,16 @@
     input[type="submit"] {
       background-color: #3498db;
       color: white;
-      cursor: pointer;
     }
   }
   a {
-    width: 100%;
     max-width: 320px;
+    width: 100%;
   }
   .fileUpload {
     label {
-      font-weight: 320;
+      font-weight: 300;
       margin-right: 10px;
-      color: rgba(0, 0, 0, 0.5);
-      clear: both;
-      float: left;
     }
   }
 }

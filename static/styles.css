@@ -140,6 +140,13 @@ input {
   input:focus, input:active {
     outline: none; }
 
+.u-avatar {
+  height: 80px;
+  background-color: #ea232c;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%; }
+
 html,
 body {
   height: 100%; }
@@ -152,7 +159,7 @@ body {
 
 main {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   min-height: 70vh; }
 
@@ -177,46 +184,49 @@ textarea,
   textarea::-webkit-input-placeholder,
   .fileUpload::-webkit-input-placeholder {
     font-weight: 300;
-    color: rgba(0, 0, 0, 0.5); }
+    color: rgba(0, 0, 0, 0.7); }
   button:-moz-placeholder,
   input:not([type="file"]):-moz-placeholder,
   textarea:-moz-placeholder,
   .fileUpload:-moz-placeholder {
     font-weight: 300;
-    color: rgba(0, 0, 0, 0.5); }
+    color: rgba(0, 0, 0, 0.7); }
   button::-moz-placeholder,
   input:not([type="file"])::-moz-placeholder,
   textarea::-moz-placeholder,
   .fileUpload::-moz-placeholder {
     font-weight: 300;
-    color: rgba(0, 0, 0, 0.5); }
+    color: rgba(0, 0, 0, 0.7); }
   button:-ms-input-placeholder,
   input:not([type="file"]):-ms-input-placeholder,
   textarea:-ms-input-placeholder,
   .fileUpload:-ms-input-placeholder {
     font-weight: 300;
-    color: rgba(0, 0, 0, 0.5); }
+    color: rgba(0, 0, 0, 0.7); }
   button::-ms-input-placeholder,
   input:not([type="file"])::-ms-input-placeholder,
   textarea::-ms-input-placeholder,
   .fileUpload::-ms-input-placeholder {
     font-weight: 300;
-    color: rgba(0, 0, 0, 0.5); }
+    color: rgba(0, 0, 0, 0.7); }
   button::placeholder,
   input:not([type="file"])::placeholder,
   textarea::placeholder,
   .fileUpload::placeholder {
     font-weight: 300;
-    color: rgba(0, 0, 0, 0.5); }
+    color: rgba(0, 0, 0, 0.7); }
 
 button {
   border: none;
   background-color: #3498db;
-  color: white;
-  cursor: pointer; }
+  color: white; }
 
 button.delete {
   background-color: #bb2f2a; }
+
+button,
+input[type="submit"] {
+  cursor: pointer; }
 
 .header {
   background-color: #ea232c;
@@ -284,6 +294,7 @@ button.delete {
           color: rgba(0, 0, 0, 0.7); }
 
 .footer {
+  margin: 50px 0;
   padding-top: 50px;
   border-top: 3px solid rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -335,7 +346,7 @@ button.delete {
   .form-container form {
     width: 100%;
     max-width: 320px;
-    margin-bottom: 25px; }
+    margin-bottom: 50px; }
     .form-container form input:not([type="file"]),
     .form-container form .fileUpload {
       display: block;
@@ -355,17 +366,13 @@ button.delete {
       margin-bottom: 25px; }
     .form-container form input[type="submit"] {
       background-color: #3498db;
-      color: white;
-      cursor: pointer; }
+      color: white; }
   .form-container a {
-    width: 100%;
-    max-width: 320px; }
+    max-width: 320px;
+    width: 100%; }
   .form-container .fileUpload label {
-    font-weight: 320;
-    margin-right: 10px;
-    color: rgba(0, 0, 0, 0.5);
-    clear: both;
-    float: left; }
+    font-weight: 300;
+    margin-right: 10px; }
 
 .social-login {
   display: -webkit-box;
@@ -380,12 +387,12 @@ button.delete {
      -moz-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-     -moz-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 23%; }
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%; }
   .social-login button {
     width: 100%;
     max-width: 320px;
@@ -405,46 +412,37 @@ button.delete {
         -ms-flex-align: center;
             align-items: center; }
     .social-login button:not(:last-child) {
-      margin-right: 15px;
       margin-bottom: 15px; }
     .social-login button span {
       margin-right: 10px;
-      font-size: 15px; }
+      font-size: 20px; }
   .social-login .social-login--github {
-    background-color: #6cc644;
+    background-color: #444444;
     color: white; }
   .social-login .social-login--facebook {
-    background-color: #3c5a99;
+    background-color: #3a5998;
     color: white; }
-  .social-login .social-login--kakaotalk {
-    background-color: #f7e319;
-    color: black; }
 
-.videoBlock {
+.videoBlock video {
+  margin-bottom: 10px;
+  max-width: 100%; }
+
+.videoBlock .videoBlock__title {
+  font-size: 18px;
+  font-weight: 300;
   margin-bottom: 10px; }
-  .videoBlock video {
-    max-width: 100%; }
-  .videoBlock video:not(:last-child) {
-    margin-right: 25px; }
-  .videoBlock .videoBlock__title {
-    font-size: 18px;
-    font-weight: 300;
-    margin-bottom: 10px; }
 
 .home-videos {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-     -moz-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+  display: grid;
+  grid-template-columns: repeat(6, minmax(150px, 1fr));
+  grid-gap: 30px; }
+  .home-videos .videoBlock:first-child,
+  .home-videos .videoBlock:nth-child(2) {
+    grid-column: span 3; }
+  .home-videos .videoBlock:nth-child(3),
+  .home-videos .videoBlock:nth-child(4),
+  .home-videos .videoBlock:nth-child(5) {
+    grid-column: span 2; }
 
 .video-detail__container {
   display: -webkit-box;
@@ -466,11 +464,11 @@ button.delete {
           align-items: center; }
   .video-detail__container .video__info {
     width: 100%;
-    max-width: 750px;
+    max-width: 850px;
     margin-top: 25px; }
     .video-detail__container .video__info button {
       width: 100px;
-      margin-bottom: 15px; }
+      margin-bottom: 25px; }
     .video-detail__container .video__info .video__title,
     .video-detail__container .video__info .video__views,
     .video-detail__container .video__info .video__description {
@@ -486,9 +484,66 @@ button.delete {
   .video-detail__container .video__comments {
     margin-top: 25px; }
     .video-detail__container .video__comments .video__comment-number {
-      font-size: 16px; }
-  .video-detail__container .video__player {
-    width: 100%;
-    max-width: 750px; }
-    .video-detail__container .video__player video {
-      width: 100%; }
+      font-size: 18px; }
+
+.user-profile {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .user-profile .user-profile__header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 18px; }
+    .user-profile .user-profile__header .profile__username {
+      font-size: 18px;
+      margin-top: 50px; }
+  .user-profile .user-profile__btns {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .user-profile .user-profile__btns a:not(:last-child) {
+      margin-bottom: 20px; }
