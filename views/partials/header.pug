@@ -4,8 +4,8 @@ header.header
 			a(href=routes.home)
 				i.fab.fa-youtube
 		.header__column
-			form(action=routes.search, method="get")
-				input(tuype="text", placeholder="Search by keyword..", name="keyword")
+			form(action=routes.search method="get")
+				input(tuype="text" placeholder="Search by keyword.." name="keyword")
 		.header__column
 			ul
 				if !loggedUser
