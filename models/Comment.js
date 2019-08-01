@@ -8,6 +8,10 @@ const CommentSchema = new mongoose.Schema({
   createAt: {
     type: Date,
     default: Date.now
+  },
+  creator: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User"
   }
   //   video ID를 가져오는 방법
   //   , video: {
